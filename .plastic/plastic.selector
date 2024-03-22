@@ -1,0 +1,4 @@
+repository "Knight-Legacy.@Adrijusbrem@cloud"
+  path "/"
+    br "/main"
+    co "/main"
