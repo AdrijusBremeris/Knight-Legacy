@@ -299,6 +299,7 @@ MonoBehaviour:
   walkSpeed: 8
   jumpImpulse: 10
   airWalkSpeed: 5
+  cm: {fileID: 0}
   _isMoving: 0
   _isRunning: 0
   _isFacingRight: 1

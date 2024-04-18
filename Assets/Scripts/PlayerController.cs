@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 5f;
     public float jumpImpulse = 8.5f;
     public float airWalkSpeed = 3f;
+    public CoinManager coinmanager;
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
@@ -199,5 +200,13 @@ public class PlayerController : MonoBehaviour
     {
        
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            coinmanager.coinCount++;
+        }
     }
 }
